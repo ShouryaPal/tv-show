@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { getShows } from "../utils/handleApi";
+import { Link } from 'react-router-dom'
 import './ShowName.css'
 
 const ShowName = () => {
@@ -20,7 +21,7 @@ const ShowName = () => {
         <div key={show.show.id} className="show-item">
           <h3 className="show-name">{show.show.name}</h3>
           <p className="show-type">{show.show.type}</p>
-          <a href={`/show/${show.show.id}`}>Show Summary</a>
+          <Link to={`/show/${show.show.id}`}>Show Summary</Link>
         </div>
       ))}
     </div>
